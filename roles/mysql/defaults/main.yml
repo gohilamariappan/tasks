@@ -1,0 +1,5 @@
+---
+ wp_mysql_db: wordpress
+ wp_mysql_user: wordpressuser
+ wp_mysql_host: localhost
+ wp_mysql_password: welcome

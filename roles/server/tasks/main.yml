@@ -1,0 +1,31 @@
+---
+ - name: Update apt cache
+   apt: update_cache=yes cache_valid_time=3600
+   sudo: yes
+
+ - name: Install a list of packages
+   apt:
+     name: "{{ packages }}"
+   vars:
+     packages:
+     - apache2
+     - mysql-server
+     - php-mysql
+     - php
+     - libapache2-mod-php
+     - php-mcrypt
+     - python-mysqldb
+     - php-gd
+     - php-ssh2 
+     
+
+
+
+
+
+
+ 
+
+       
+
+
