@@ -1,0 +1,21 @@
+---
+ - name: Update apt cache
+   apt: update_cache=yes cache_valid_time=3600
+   sudo: yes
+
+ - name: Install a list of packages
+   apt:
+     name: "{{ packages }}"
+   vars:
+     packages:
+     - mysql-server
+     - python-mysqldb
+ - name: Create mysql database
+   mysql_db: name={{ wp_mysql_db }} state=present
+
+ - name: Create mysql user
+   mysql_user: 
+     name={{ wp_mysql_user }}
+     host={{ wp_mysql_host }}
+     password={{ wp_mysql_password }} 
+     priv=*.*:ALL
