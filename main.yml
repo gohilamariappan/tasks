@@ -1,5 +1,5 @@
 ---
-###test line#######
+###test line#######fail
 - hosts: local
   become: yes
   roles:
