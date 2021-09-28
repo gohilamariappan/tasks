@@ -1,8 +1,7 @@
 ---
-###test line#######fail#####success
+###test line#######fail#####success###test
 - hosts: local
   become: yes
   roles:
     - nginx_server
-
 
